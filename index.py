@@ -29,3 +29,6 @@ def user_details():
     
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
+
+# Export app for Vercel
+handler = app
