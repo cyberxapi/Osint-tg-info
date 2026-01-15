@@ -3,12 +3,15 @@
   "builds": [
     {
       "src": "index.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "wsgiHandler": "handler"
+      }
     }
   ],
   "routes": [
     {
-      "src": "/user-details",
+      "src": "/(.*)",
       "dest": "index.py"
     }
   ]
